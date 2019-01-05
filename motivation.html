@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>2018CVLAB_Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">CVLab 2018</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="motivation.html">Motivation</a>
+						<a href="implement.html">Implement</a>
+						<a href="demo.html">Demo</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+
+		<!-- one -->
+			<section id="one" class="wrapper" style="padding: 2em 0">
+				<div class="inner" >
+					<header class="align-center">
+						<h2>Motivation</h2>
+					</header>
+					<p style="padding: 0 0 0 0 ">隨著深度學習應用於電腦視覺上的演進，研究方向從二維影像分析，逐漸擴展至三維資料的處理，其中關於如何從物體的二維影像，準確又快速地重建回其原有三維模型資料，便是最火紅的研究之一。過去受限於含有三維模型標記的真實影像數量不足，無法達到良好的重建結果，此外如何運用其技術轉化為具有高度價值及使用性的應用，也是我們關注的焦點。
+							本次專題我們參考近期於真實影像的三維重建上，獲得傑出效果的幾篇論文，認為採用改良式的「三段式訓練架構」，會比一般兩段式的訓練架構得到更好的訓練效果，能有效解決上述問題，同時結合當紅的擴增實境(Augmented Reality)套件─Vuforia，實作一款基於深度學習三維重建技術下的DM商品模擬器。</p>
+				</div>
+			</section>
+		<!-- two -->
+			<section id="two" class="wrapper" style="padding: 0em 0">
+				<div class="inner" >
+					<div class="flex flex-2">
+						<article>
+							<header>
+								<h3>Problem</h3>
+							</header>
+							<div class="image fit">
+								<img src="images/problem.png" alt="Pic 01" />
+							</div>
+							<p style="padding: 0 0 0 0 ">現有三維模型重建使用的神經網路架構，大多從過去用來處理二維資料的CNN作修改而來，出於三維模型的特性和實際應用的取向，導致三維模型重建上目前有兩大問題尚待解決，一是真實二維影像（Real image）附有實際對應的三維模型（Ground-truth 3D shape）之數據量不夠，難以滿足深度學習需要的大量資料，二則是合適的儲存方式，將直接影響計算上的速度與進行延伸應用的難度。
+							</p>
+						</article>
+						<article>
+							<header>
+								<h3>Concept</h3>
+							</header>
+							<div class="image fit">
+								<img src="images/concept.png" alt="Pic 01" />
+							</div>
+							<p style="padding: 0 0 0 0 ">找出真實影像與合成資料的一致處，例如深度（Depth map）、表面法向量（Surface normal）、骨架（Skeleton）等，這些不受材質與環境光影響的內部特徵（Intrinsic images），用其作為數據訓練出的Model。先將真實影像轉成對應的內部特徵，再從內部特徵去預估三維模型，最後以合成影像中的實際三維模型作回推（Reprojection）。
+
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

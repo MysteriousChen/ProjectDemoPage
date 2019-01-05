@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>2018CVLAB_Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">CVLab 2018</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="motivation.html">Motivation</a>
+						<a href="implement.html">Implement</a>
+						<a href="demo.html">Demo</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h1>VUFORIA DM PRODUCT SIMULATOR</h1>
+				<p>深度學習於二維影像重建三維模型之探討及應用</p>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner">
+					<div class="flex flex-3">
+						<article>
+							<header>
+								<h3>Motivation</h3>
+							</header>
+							<p>隨著深度學習應用於電腦視覺上的演進，研究方向從二維影像分析，逐漸擴展至三維資料的處理，其中關於如何從物體的二維影像，準確又快速地重建回其原有三維模型資料，便是最火紅的研究之一。過去受限於含有三維模型標記的真實影像數量不足，無法達到良好的重建結果，此外如何運用其技術轉化為具有高度價值及使用性的應用，也是我們關注的焦點。
+							本次專題我們參考近期於真實影像的三維重建上，獲得傑出效果的幾篇論文，認為採用改良式的「三段式訓練架構」，會比一般兩段式的訓練架構得到更好的訓練效果，能有效解決上述問題，同時結合當紅的擴增實境(Augmented Reality)套件─Vuforia，實作一款基於深度學習三維重建技術下的DM商品模擬器。
+							</p>
+							<footer>
+								<a href="motivation.html" class="button special">Learn More</a>
+							</footer>
+						</article>
+						<article>
+							<header>
+								<h3>Implement</h3>
+							</header>
+							<p>我們使用一個三段式的訓練架構，靈感來自於MarrNet和3D-INN兩種架構，先選定內部特徵作為真實與合成影像的中間點（Intermediate），以此為分界，前面以真實影像為輸入，輸出內部特徵，後面則以合成影像去重建三維模型，最後藉由Reprojection Layer比較Ground-truth和預測結果，將前後兩段訓練架構串接。
+							再來針對中間點的特性，我們額外進行骨架比較的三維重建，目標是藉由對物體進行骨架分析，結合物體具有固定型態的特性，能快速且相當精確地於資料庫中比對出最接近的結果，提供進行查找、搜尋相關物品的另一種可能。
+							最後是關於APP呈現的擴增實境方面，我們分別嘗試了ARCore、Vuforia、Hybrid(綜合兩者)等方案，考量穩定性和實用性後，搭配Unity設計出一款DM商品三維模擬器的原型。
+							</p>
+							<footer>
+								<a href="implement.html" class="button special">Learn More</a>
+							</footer>
+						</article>
+						<article>
+							<header>
+								<h3>Demo</h3>
+							</header>
+							<p>我們Vuforia DM Simulator主要有兩大功能「3D Model in DM」和「Similar Furniture Recommandation」，在3D Model in DM的模式中使用者可以透過拍照重建照片中的椅子並可以更改不同材質，最後按下放置鍵在自己喜歡的地點做觀看。
+							在Similar Furniture Recommandation模式下，使用者可以將相機對準任何一個喜好的家具，並按下螢幕右下角的相機按鈕，app將會顯示購買連結提供選購。
+							</p>
+							<footer>
+								<a href="demo.html" class="button special">Learn More</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style1 special">
+				<div class="inner">
+					<header>
+						<h2>Team Member</h2>
+					</header>
+					<div class="flex flex-4">
+						<div class="box person">
+							<div class="image round">
+								<img src="images/m1.jpg" alt="Person 1" />
+							</div>
+							<h3>鄭凱文</h3>
+							<p>國立清華大學 資訊工程學系</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/m2.jpg" alt="Person 2" />
+							</div>
+							<h3>諸恩宏</h3>
+							<p>國立清華大學 資訊工程學系</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/m3.jpg" alt="Person 3" />
+							</div>
+							<h3>張言鴻</h3>
+							<p>國立清華大學 資訊工程學系</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>
+						</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
