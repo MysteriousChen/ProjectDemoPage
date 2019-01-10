@@ -3123,9 +3123,6 @@
 
 @media screen and (max-width: 1080px){
 
-	#header-container {
-		padding-left: 40%;
-	}
 
 	.video-container {
 		width:  848px;
@@ -3148,10 +3145,6 @@
 @media screen and (max-width: 880px){
 
 
-	#header-container {
-		padding-left: 40%;
-	}
-
 	.video-container {
 		width:  736px;
 		height:  410px;
@@ -3170,10 +3163,6 @@
 
 @media screen and (max-width: 780px){
 
-
-	#header-container {
-		padding-left: 37%;
-	}
 	#video-name {
 		font-size: 24px; 
 		color: black; 
@@ -3187,9 +3176,6 @@
 
 @media screen and (max-width: 680px){
 
-	#header-container {
-		padding-left: 39%;
-	}
 
 	#video-name {
 		font-size: 20px; 
@@ -3215,9 +3201,6 @@
 
 @media screen and (max-width: 500px){
 
-	#header-container {
-		padding-left: 37%;
-	}
 
 	#video-name {
 		font-size: 16px; 
