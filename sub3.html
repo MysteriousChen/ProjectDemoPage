@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>2018CVLAB_Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/special.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">CVLab 2018</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="motivation.html">Motivation</a>
+						<a href="implement.html">Implementation</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+			<section id="one" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Similar furniture recommendation
+</h2>
+						<p>3DINN</p>
+					</header>
+					</div>
+				</div>
+			</section>
+			<section id="wrapper1" class="divided">
+				<!-- One -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2 style="font-size: 28px; font-weight: bold;">Server side skeleton reconstruct</h2>
+							<p>對想尋找的家具拍照，上傳至後端Server進行比對與骨架重建的動作，在骨架重建部分這裡使用了3DINN structure，同樣是三段式訓練架構，差別是Intrinsic properties則是利用2D keypoints作為Intermediate來還原骨架數據。
+							此外根據家具類型的不同，我們也額外套用Base shape來提高預測速度與精準度，由於家具都具備其基本形狀(如椅子就是由椅背、坐墊、四肢椅腳所構成)，僅在骨架長度、間距、擺角上有所差異，因此還原時便能從一個大致結果開始、針對Keypoint細節再做微調，比起從零開始預測能得到更優良的成果。
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/demo1.png" alt="" />
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2 style="font-size: 28px; font-weight: bold;">Skeleton Comparsion</h2>
+							<p>事先將準備好供查詢的圖片集進行骨架重架，Input & Output datasets分別置於local & remote server上。再將剛才拍照得到的骨架還原數據與Server端的資料庫做比對，回傳最接近的結果，呈現在APP上。
+							比對公式：計算目標與比對對象其數據的”加權差值”，提高骨架長度與間距的比重，同時降低家具擺角的比重(不同角度的拍攝依然視為同款家具)
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/demo1.png" alt="" />
+						</div>
+					</section>
+				<!-- Three -->
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main_special.js"></script>
+			<script src="assets/js/util_special.js"></script>
+
+	</body>
+</html>
