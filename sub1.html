@@ -39,47 +39,44 @@
 						<strong>Synthetic data</strong>: 因為Domain issue，其結果無法套用在真實影像上，等同沒有實際利用價值<br>
 						有鑑於不同Domain帶來的麻煩，三段式訓練架構便是希望從這兩種資料集中，找出共同、不具Domain的特性，藉由此性質迴避掉Domain issue problem。
 						</p>
+						<div style="display: flex; justify-content: center;">
+							<img src="images/implement1.png" id="feature-picture" />
+						</div>
+						<div id="header-container">
+							<h3 style="color:black;">real & synthetic</h3>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section id="wrapper1" class="divided">
-				<!-- One -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2 style="font-size: 28px; font-weight: bold;">Intermediate</h2>
+			<section id="wrapper" >
+				<div class="inner">
+					<div class="flex flex-3">
+						<article>
+							<header>
+								<h3>Intermediate</h3>
+							</header>
 							<p> (1)	2D image -> <strong>Intermediate</strong> (Real image as input) <br>
 								(2)	<strong>Intermediate</strong> -> Specific kind of 3D shape (Synthetic data as input) <br>
 								(3)	Reprojection: Estimated 3D shape -> <strong>Intermediate</strong> <br>
 								(Synthetic data, with ground truth 3D shape data)&nbsp;&nbsp;Intermediate: Use Intrinsic object properties<br>
 								相較於傳統重建上，這裡多了一層Intermediate來聯繫Input dataset & predicted output，而由於作為Intermediate的Intrinsic properties為無關環境因素，純粹與物體本身有關的內部性質，如深度、法向量、骨架等，因此以此作為input訓練的結果，便不具有Domain issue的問題。
 							</p>
-						</div>
-						<div class="image">
-							<img src="images/demo1.png" alt="" />
-						</div>
-					</section>
-
-				<!-- Two -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2 style="font-size: 28px; font-weight: bold;">Three-stage training archtecture</h2>
+						</article>
+						<article>
+							<header>
+								<h3>Three-stage training archtecture</h3>
+							</header>
 							<p>三段式訓練架構的關鍵在於，訓練上會將Input轉為no domain的Intrinsic properties作為Intermediate，實際上做Predict & loss updating訓練的是Intermediate & output layer，由於Intrinsic properties不受Domain影響，這段結果自然不分Dataset種類皆可適用，如此Input無論是Real or Synthetic datasets，只要一律先轉換成Intrinsic properties，便能得出當初訓練完所預期的成果。
 							</p>
-						</div>
-						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
-						</div>
-					</section>
-				<!-- Three -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2 style="font-size: 28px; font-weight: bold;">Application</h2>
+						</article>
+						<article>
+							<header>
+								<h3>Application</h3>
+							</header>
 							<p>配合我們APP的需求，我們參考了兩篇運用三段式訓練架構的Paper，《MarrNet 3D Shape Reconstruction via 2.5D Sketches》、《3D Interpreter Networks for Viewer-Centered Wireframe Modeling》，作為重建家具三維模型與骨架的數據來源。</p>
-						</div>
-						<div class="image">
-							<img src="images/spotlight01.jpg" alt="" />
-						</div>
-					</section>
+						</article>
+					</div>
+				</div>
 			</section>
 
 		<!-- Footer -->
