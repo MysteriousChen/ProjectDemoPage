@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>2018CVLAB_Project</title>
+		<title>3D Furniture Model Display in AR Mode</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">CVLab 2018</a>
+					<!-- <a href="index.html" class="logo">CVLab 2018</a> -->
 					<nav id="nav">
 						<a href="index.html">Home</a>
 						<a href="motivation.html">Motivation</a>
@@ -31,7 +31,7 @@
 			<section id="one" class="wrapper">
 				<div class="inner">
 					<header class="align-center">
-						<h2>3D furniture model display in AR mode</h2>
+						<h2>3D Furniture Model Display in AR Mode</h2>
 						<p>Marnet & Vuforia</p>
 					</header>
 					</div>
@@ -42,8 +42,8 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2 style="font-size: 28px; font-weight: bold;">Construct 3D Model</h2>
-							<p>使用MarrNet structure之三段式訓練架構，並以normal, depth, silhouette作為Intermediate，其特色還包括運用了TL-Network來降低數據上的運算量，方便我們在重建速度上達到Real time的效能。
-							此外，原MarrNet structure生成的結果過於粗糙、格式也無法相容於Unity中，我們另外編寫了再處理程序，對生成的三維數據做格式處理，並有效地降低模型邊緣的鋸齒感。
+							<p>使用 MarrNet structure 之三段式訓練架構，並以 normal, depth, silhouette 作為 Intermediate，其特色還包括運用了 TL-Network 來降低數據上的運算量，方便我們在重建速度上達到 Real time 的效能。
+							此外，原 MarrNet structure 生成的結果過於粗糙、格式也無法相容於 Unity 中，我們另外編寫了再處理程序，對生成的三維數據做格式處理，並有效地降低模型邊緣的鋸齒感。
 							</p>
 						</div>
 						<div class="image">
@@ -54,10 +54,10 @@
 				<!-- Two -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2 style="font-size: 28px; font-weight: bold;">Build AR detection database</h2>
-							<p>Vuforia Engine是由高通開發的一款擴增實境套件，只要給予圖片集，Vuforia cloud會自動抓取其圖片特徵，建立圖片特徵資料庫，未來只要將資料庫下載、結合Unity等APP開發引擎中，透過相機拍攝目標物件，Vuforia便能辨識出其在資料庫中的編號，便能作相對應的圖片三維重建及後續應用。<br>
+							<h2 style="font-size: 28px; font-weight: bold;">Build AR Detection Database</h2>
+							<p>Vuforia Engine 是由高通開發的一款擴增實境套件，只要給予圖片集，Vuforia cloud會自動抓取其圖片特徵，建立圖片特徵資料庫，未來只要將資料庫下載、結合Unity等APP開發引擎中，透過相機拍攝目標物件，Vuforia 便能辨識出其在資料庫中的編號，便能作相對應的圖片三維重建及後續應用。<br>
 								偵測圖片速度非常快，且精準度極高<br>
-								可結合如ARCore、ARKit等其他AR套件之功能
+								可結合如 ARCore、ARKit 等其他 AR 套件之功能
 							</p>
 						</div>
 						<div class="image">
@@ -67,8 +67,8 @@
 				<!-- Three -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
-							<h2 style="font-size: 28px; font-weight: bold;">Integrate with unity</h2>
-							<p>有了前兩樣工具，我們便能透過Unity的輔助，讓安裝APP的手機相機具備圖片偵測功能，告知需使用MarrNet重建的家具物件，再使用Vuforia以AR形式呈現在手機螢幕上，同時加入簡單的互動功能，此外我們也結合ARCore的平面偵測功能，可以及時偵測使用者目前的空間、微調模型至適當尺寸，進行家具模擬擺設。</p>
+							<h2 style="font-size: 28px; font-weight: bold;">Integrate With Unity</h2>
+							<p>有了前兩樣工具，我們便能透過 Unity 的輔助，讓安裝 APP 的手機相機具備圖片偵測功能，告知需使用 MarrNet 重建的家具物件，再使用 Vuforia 以 AR 形式呈現在手機螢幕上，同時加入簡單的互動功能，此外我們也結合 ARCore 的平面偵測功能，可以及時偵測使用者目前的空間、微調模型至適當尺寸，進行家具模擬擺設。</p>
 						</div>
 						<div class="image">
 							<img src="images/unity.png" alt="" />
@@ -79,10 +79,9 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
-					<div class="flex">
-						<div class="copyright">
-							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-						</div>
+					<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>
+							<p>2018 <a href="http://cv.cs.nthu.edu.tw/">NTHU CV LAB</a></p>
 					</div>
 				</div>
 			</footer>

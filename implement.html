@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>2018CVLAB_Project</title>
+		<title>Implementation</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,7 +16,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">CVLab 2018</a>
+					<!-- <a href="index.html" class="logo">CVLab 2018</a> -->
 					<nav id="nav">
 						<a href="index.html">Home</a>
 						<a href="motivation.html">Motivation</a>
@@ -33,9 +33,9 @@
 						<h2>Implementation</h2>
 						<p>3DINN & Marnet & Vuforia</p>
 					</header>
-					<p>我們使用一個三段式的訓練架構，靈感來自於MarrNet和3D-INN兩種架構，先選定內部特徵作為真實與合成影像的中間點（Intermediate），以此為分界，前面以真實影像為輸入，輸出內部特徵，後面則以合成影像去重建三維模型，最後藉由Reprojection Layer比較Ground-truth和預測結果，將前後兩段訓練架構串接。
+					<p>我們使用一個三段式的訓練架構，靈感來自於 MarrNet 和 3D-INN 兩種架構，先選定內部特徵作為真實與合成影像的中間點（Intermediate），以此為分界，前面以真實影像為輸入，輸出內部特徵，後面則以合成影像去重建三維模型，最後藉由 Reprojection Layer 比較 Ground-truth 和預測結果，將前後兩段訓練架構串接。
 							再來針對中間點的特性，我們額外進行骨架比較的三維重建，目標是藉由對物體進行骨架分析，結合物體具有固定型態的特性，能快速且相當精確地於資料庫中比對出最接近的結果，提供進行查找、搜尋相關物品的另一種可能。
-							最後是關於APP呈現的擴增實境方面，我們分別嘗試了ARCore、Vuforia、Hybrid(綜合兩者)等方案，考量穩定性和實用性後，搭配Unity設計出一款DM商品三維模擬器的原型。</p>
+							最後是關於APP呈現的擴增實境方面，我們分別嘗試了 ARCore、Vuforia、Hybrid (綜合兩者)等方案，考量穩定性和實用性後，搭配 Unity 設計出一款 DM 商品三維模擬器的原型。</p>
 					</div>
 				</div>
 			</section>
@@ -44,26 +44,26 @@
 					<div class="flex flex-3">
 						<article>
 							<header>
-								<h3>Domain issue problem</h3>
+								<h3>Domain Issue Problem</h3>
 							</header>
-							<img src="images/implement1.png" id="feature-picture" />
-							<p>由於Real image會受到拍攝環境因素影響，使得Real & Synthetic、兩種dataset各自訓練出來的架構無法混用</p>
+							<img src="images/implement1.png" id="feature-picture" style="margin-bottom: 1rem" />
+							<p>由於 Real image 會受到拍攝環境因素影響，使得 Real & Synthetic、兩種 dataset 各自訓練出來的架構無法混用</p>
 							<a href="sub1.html" class="button special">Learn More</a>
 						</article>
 						<article>
 							<header>
-								<h3>3D furniture model display in AR mode</h3>
+								<h3>3D Furniture Model Display in AR Mode</h3>
 							</header>
-							<img src="images/demo3.png" id="feature-picture" />
-							<p>利用MarrNet三段式訓練架構將圖片轉換成模型並放入資料庫中，接著建立Vuforia Engine的AR detection databas將圖片與模型變成一組一組的配對，最後使用Unity將兩者功能整合，透過拍照可以找出最相近的圖片，並從圖片端找到配對的模型顯示在螢幕上。</p>
+							<img src="images/demo3.png" id="feature-picture" style="margin-bottom: 1rem"/>
+							<p>利用MarrNet三段式訓練架構將圖片轉換成模型並放入資料庫中，接著建立 Vuforia Engine 的 AR detection database 將圖片與模型變成一組一組的配對，最後使用 Unity 將兩者功能整合，透過拍照可以找出最相近的圖片，並從圖片端找到配對的模型顯示在螢幕上。</p>
 							<a href="sub2.html" class="button special">Learn More</a>
 						</article>
 						<article>
 							<header>
-								<h3>Similar furniture recommendation</h3>
+								<h3>Similar Furniture Recommendation</h3>
 							</header>
-							<img src="images/demo6.png" id="feature-picture" />
-							<p>將拍入照片上傳至Server端進行骨架重建，找出在預先建立好的資料庫中最符合的配對，並將資訊回傳給User端</p>
+							<img src="images/demo6.png" id="feature-picture" style="margin-bottom: 1rem"/>
+							<p>將拍入照片上傳至 Server 端進行骨架重建，找出在預先建立好的資料庫中最符合的配對，並將資訊回傳給 User 端</p>
 							<a href="sub3.html" class="button special">Learn More</a>
 						</article>
 					</div>
@@ -72,10 +72,9 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
-					<div class="flex">
-						<div class="copyright">
-							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-						</div>
+					<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>
+							<p>2018 <a href="http://cv.cs.nthu.edu.tw/">NTHU CV LAB</a></p>
 					</div>
 				</div>
 			</footer>

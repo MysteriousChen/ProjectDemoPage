@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>2018CVLAB_Project</title>
+		<title>Domain Issue Problem</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">CVLab 2018</a>
+					<!-- <a href="index.html" class="logo">CVLab 2018</a> -->
 					<nav id="nav">
 						<a href="index.html">Home</a>
 						<a href="motivation.html">Motivation</a>
@@ -34,16 +34,16 @@
 						<h2>Domain Issue Problem</h2>
 						<p>三段式訓練架構</p>
 					</header>
-						<p>由於Real image會受到拍攝環境因素影響，使得Real & Synthetic、兩種dataset各自訓練出來的架構無法混用<br>
-						<strong>Real image</strong>: 缺乏Ground truth 3D shape提供訓練<br>
-						<strong>Synthetic data</strong>: 因為Domain issue，其結果無法套用在真實影像上，等同沒有實際利用價值<br>
-						有鑑於不同Domain帶來的麻煩，三段式訓練架構便是希望從這兩種資料集中，找出共同、不具Domain的特性，藉由此性質迴避掉Domain issue problem。
+						<p>由於 Real image 會受到拍攝環境因素影響，使得 Real & Synthetic、兩種 dataset 各自訓練出來的架構無法混用<br>
+						<strong>Real Image:</strong> 缺乏 Ground truth 3D shape 提供訓練<br>
+						<strong>Synthetic Data:</strong> 因為 Domain issue，其結果無法套用在真實影像上，等同沒有實際利用價值<br>
+						有鑑於不同 Domain 帶來的麻煩，三段式訓練架構便是希望從這兩種資料集中，找出共同、不具 Domain 的特性，藉由此性質迴避掉 Domain issue problem。
 						</p>
 						<div style="display: flex; justify-content: center;">
 							<img src="images/implement1.png" id="feature-picture" />
 						</div>
 						<div id="header-container">
-							<h3 style="color:black;">real & synthetic</h3>
+							<h3 style="color:gray; margin-top: 1rem;">Real & Synthetic Images</h3>
 						</div>
 					</div>
 				</div>
@@ -55,25 +55,27 @@
 							<header>
 								<h3>Intermediate</h3>
 							</header>
-							<p> (1)	2D image -> <strong>Intermediate</strong> (Real image as input) <br>
-								(2)	<strong>Intermediate</strong> -> Specific kind of 3D shape (Synthetic data as input) <br>
+							<p> (1)	2D image -> <strong>Intermediate</strong><br>(Real image as input) <br><br>
+								(2)	<strong>Intermediate</strong> -> Specific kind of 3D shape <br>(Synthetic data as input) <br><br>
 								(3)	Reprojection: Estimated 3D shape -> <strong>Intermediate</strong> <br>
-								(Synthetic data, with ground truth 3D shape data)&nbsp;&nbsp;Intermediate: Use Intrinsic object properties<br>
-								相較於傳統重建上，這裡多了一層Intermediate來聯繫Input dataset & predicted output，而由於作為Intermediate的Intrinsic properties為無關環境因素，純粹與物體本身有關的內部性質，如深度、法向量、骨架等，因此以此作為input訓練的結果，便不具有Domain issue的問題。
+								(Synthetic data, with ground truth 3D shape data) <br><br>
+
+								<strong>Intermediate:</strong> Use Intrinsic object properties<br>
+								相較於傳統重建上，這裡多了一層 Intermediate 來聯繫 Input dataset & predicted output，而由於作為 Intermediate 的 Intrinsic properties 為無關環境因素，純粹與物體本身有關的內部性質，如深度、法向量、骨架等，因此以此作為 input 訓練的結果，便不具有 Domain issue 的問題。
 							</p>
 						</article>
 						<article>
 							<header>
-								<h3>Three-stage training archtecture</h3>
+								<h3>Three-stage Training Archtecture</h3>
 							</header>
-							<p>三段式訓練架構的關鍵在於，訓練上會將Input轉為no domain的Intrinsic properties作為Intermediate，實際上做Predict & loss updating訓練的是Intermediate & output layer，由於Intrinsic properties不受Domain影響，這段結果自然不分Dataset種類皆可適用，如此Input無論是Real or Synthetic datasets，只要一律先轉換成Intrinsic properties，便能得出當初訓練完所預期的成果。
+							<p>三段式訓練架構的關鍵在於，訓練上會將 Input 轉為 no domain 的 Intrinsic properties 作為 Intermediate，實際上做 Predict & loss updating 訓練的是 Intermediate & output layer，由於 Intrinsic properties 不受 Domain 影響，這段結果自然不分 Dataset 種類皆可適用，如此 Input 無論是 Real or Synthetic datasets，只要一律先轉換成 Intrinsic properties，便能得出當初訓練完所預期的成果。
 							</p>
 						</article>
 						<article>
 							<header>
 								<h3>Application</h3>
 							</header>
-							<p>配合我們APP的需求，我們參考了兩篇運用三段式訓練架構的Paper，《MarrNet 3D Shape Reconstruction via 2.5D Sketches》、《3D Interpreter Networks for Viewer-Centered Wireframe Modeling》，作為重建家具三維模型與骨架的數據來源。</p>
+							<p>配合我們 APP 的需求，我們參考了兩篇運用三段式訓練架構的 Paper，《MarrNet 3D Shape Reconstruction via 2.5D Sketches》、《3D Interpreter Networks for Viewer-Centered Wireframe Modeling》，作為重建家具三維模型與骨架的數據來源。</p>
 						</article>
 					</div>
 				</div>
@@ -82,10 +84,9 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
-					<div class="flex">
-						<div class="copyright">
-							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-						</div>
+					<div class="copyright">
+							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>
+							<p>2018 <a href="http://cv.cs.nthu.edu.tw/">NTHU CV LAB</a></p>
 					</div>
 				</div>
 			</footer>
